@@ -110,3 +110,9 @@ button {
 button:hover {
   border-color: #9d64ff;
 }
+
+.item-count {
+  display: flex;
+  margin-top: 20px;
+  color: #fff;
+}
