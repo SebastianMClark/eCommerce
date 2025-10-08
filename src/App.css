@@ -86,8 +86,8 @@ body {
   text-decoration: none;
 }
 
-.item-list-container {
-  margin-top: 60px;
+.item-list {
+  margin-top: 150px;
   color: #fff;
 }
 
@@ -95,11 +95,17 @@ body {
   display: flex;
   gap: 5rem;
   padding: 2rem;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .items img {
   margin: 20px 0px;
+}
+
+.items h2 {
+  font-size: 1.1rem;
+  font-weight: 400 !important;
+  margin: 0;
 }
 
 button {
