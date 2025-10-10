@@ -7,6 +7,7 @@ function ItemCount(){
 
     console.log("🪄 Renderizando ItemCount...");
 
+    // Tarea de montaje (se ejecuta una sola vez, o al cambiar limit)
     useEffect(() => {
         console.log("🔎 Consultando Stock...");
     }, [limit])
