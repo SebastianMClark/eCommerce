@@ -1,12 +1,22 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 function ItemCount(){
-    let [count, setCount] = useState(1);
+    const [count, setCount] = useState(1);
+    const [limit, setLimit] = useState(false);
     const maxValue = 10;
+
+    console.log("🪄 Renderizando ItemCount...");
+
+    useEffect(() => {
+        console.log("🔎 Consultando Stock...");
+    }, [limit])
 
     function sumar(){
         if (count < maxValue) {
             setCount(count + 1);
+        }
+        else {
+            setLimit(true);
         }
     }
 
@@ -21,6 +31,7 @@ function ItemCount(){
             <button onClick= {restar} >-</button>
             <p>{count}</p>
             <button onClick= {sumar} >+</button>
+            { limit ? <p>❌ Alcanzaste el límite de productos</p> : <></> }
         </div>
     )
 }

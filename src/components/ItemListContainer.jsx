@@ -8,7 +8,7 @@ function ItemListContainer(props) {
         <h2>{props.greeting}</h2>
         <div className="items">
           {
-            vinos.slice(0, 4).map( item => (
+            vinos.slice(0, 10).map( item => (
             <Item
               titulo={item.titulo}
               img={item.img}
