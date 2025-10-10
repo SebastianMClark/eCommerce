@@ -44,10 +44,15 @@ body {
   padding: 1rem 2rem;
   background-color: #282c34;
   color: white;
-  position:absolute;
+  position:sticky;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
 }
 
 .categorias {
@@ -81,33 +86,6 @@ body {
   top: -1px;
 } */
 
-.nav-bar a {
-  color: white;
-  text-decoration: none;
-}
-
-.item-list {
-  margin-top: 150px;
-  color: #fff;
-}
-
-.items {
-  /* display: flex; */
-  gap: 5rem;
-  padding: 2rem;
-  margin-top: 40px;
-}
-
-.items img {
-  margin: 20px 0px;
-}
-
-.items h2 {
-  font-size: 1.1rem;
-  font-weight: 400 !important;
-  margin: 0;
-}
-
 button {
   background-color: #282C34;
   border-radius: 20px !important;
@@ -117,12 +95,61 @@ button:hover {
   border-color: #9d64ff;
 }
 
+.item-list {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.items {
+  /* display: flex; */
+  gap: 5rem;
+}
+
+.items img {
+  margin: 20px 0px;
+  border-radius: 20px;
+}
+
+.items img:hover {
+  border: 2px solid #9d64ff;
+  scale: 1.1;
+}
+
+.info-corta {
+  width: 300px; /* o fit-content */
+  padding: 20px;
+  margin: 0 auto 20px;
+  background-color: #20232a80;
+  border-radius: 20px;
+}
+
+.items h2 {
+  font-size: 1.1rem;
+  font-weight: 400 !important;
+  margin: 0;
+}
+
+.botones-item {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botones-item button {
+  background: transparent;
+  padding: 0px;
+  border: none;
+}
+
 .item-count {
+  margin: 20px auto;
+  color: #fff;
+}
+
+.contador {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
-  color: #fff;
 }
 
 .item-count button {
@@ -131,4 +158,8 @@ button:hover {
 
 .item-count p {
   margin: 0px 10px;
+}
+
+.msg-limite {
+  text-align: center;
 }

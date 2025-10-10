@@ -2,7 +2,8 @@ const vinos = [
   {
     id: 1,
     titulo: "Rutini Cabernet Sauvignon 2021",
-    categoria: "cabernet sauvignon",
+    categoria: "tinto",
+    uva: "Cabernet Sauvignon",
     precio: 14500,
     img: "https://placehold.co/500x500?text=Cabernet+1",
     stock: 12,
@@ -11,7 +12,8 @@ const vinos = [
   {
     id: 2,
     titulo: "Luigi Bosca Cabernet Sauvignon 2020",
-    categoria: "cabernet sauvignon",
+    categoria: "tinto",
+    uva: "Cabernet Sauvignon",
     precio: 16800,
     img: "https://placehold.co/500x500?text=Cabernet+2",
     stock: 8,
@@ -20,7 +22,8 @@ const vinos = [
   {
     id: 3,
     titulo: "Nieto Senetiner Cabernet Sauvignon 2022",
-    categoria: "cabernet sauvignon",
+    categoria: "tinto",
+    uva: "Cabernet Sauvignon",
     precio: 12500,
     img: "https://placehold.co/500x500?text=Cabernet+3",
     stock: 10,
@@ -29,7 +32,8 @@ const vinos = [
   {
     id: 4,
     titulo: "Trapiche Reserva Cabernet Sauvignon",
-    categoria: "cabernet sauvignon",
+    categoria: "tinto",
+    uva: "Cabernet Sauvignon",
     precio: 11800,
     img: "https://placehold.co/500x500?text=Cabernet+4",
     stock: 14,
@@ -38,7 +42,8 @@ const vinos = [
   {
     id: 5,
     titulo: "Catena Zapata Malbec 2021",
-    categoria: "malbec",
+    categoria: "tinto",
+    uva: "Malbec",
     precio: 17200,
     img: "https://placehold.co/500x500?text=Malbec+1",
     stock: 9,
@@ -47,7 +52,8 @@ const vinos = [
   {
     id: 6,
     titulo: "Luigi Bosca Malbec D.O.C.",
-    categoria: "malbec",
+    categoria: "tinto",
+    uva: "Malbec",
     precio: 18500,
     img: "https://placehold.co/500x500?text=Malbec+2",
     stock: 7,
@@ -56,7 +62,8 @@ const vinos = [
   {
     id: 7,
     titulo: "Los Haroldos Estate Malbec",
-    categoria: "malbec",
+    categoria: "tinto",
+    uva: "Malbec",
     precio: 9900,
     img: "https://placehold.co/500x500?text=Malbec+3",
     stock: 15,
@@ -65,7 +72,8 @@ const vinos = [
   {
     id: 8,
     titulo: "Alamos Malbec 2022",
-    categoria: "malbec",
+    categoria: "tinto",
+    uva: "Malbec",
     precio: 8700,
     img: "https://placehold.co/500x500?text=Malbec+4",
     stock: 20,
@@ -74,7 +82,8 @@ const vinos = [
   {
     id: 9,
     titulo: "El Esteco Torrontés 2023",
-    categoria: "torrontés",
+    categoria: "blanco",
+    uva: "Torrontés",
     precio: 7600,
     img: "https://placehold.co/500x500?text=Torrontes+1",
     stock: 18,
@@ -83,7 +92,8 @@ const vinos = [
   {
     id: 10,
     titulo: "Crios Torrontés",
-    categoria: "torrontés",
+    categoria: "blanco",
+    uva: "Torrontés",
     precio: 8200,
     img: "https://placehold.co/500x500?text=Torrontes+2",
     stock: 16,
@@ -92,7 +102,8 @@ const vinos = [
   {
     id: 11,
     titulo: "Altos del Plata Torrontés",
-    categoria: "torrontés",
+    categoria: "blanco",
+    uva: "Torrontés",
     precio: 7100,
     img: "https://placehold.co/500x500?text=Torrontes+3",
     stock: 22,
@@ -101,7 +112,8 @@ const vinos = [
   {
     id: 12,
     titulo: "Don David Torrontés 2022",
-    categoria: "torrontés",
+    categoria: "blanco",
+    uva: "Torrontés",
     precio: 8400,
     img: "https://placehold.co/500x500?text=Torrontes+4",
     stock: 13,
@@ -110,7 +122,8 @@ const vinos = [
   {
     id: 13,
     titulo: "Norton Chardonnay 2023",
-    categoria: "otros",
+    categoria: "blanco",
+    uva: "Chardonnay",
     precio: 9400,
     img: "https://placehold.co/500x500?text=Chardonnay",
     stock: 11,
@@ -119,7 +132,8 @@ const vinos = [
   {
     id: 14,
     titulo: "Trumpeter Pinot Noir",
-    categoria: "otros",
+    categoria: "tinto",
+    uva: "Pinot Noir",
     precio: 13800,
     img: "https://placehold.co/500x500?text=Pinot+Noir",
     stock: 9,
@@ -128,7 +142,8 @@ const vinos = [
   {
     id: 15,
     titulo: "Salentein Blend de Terroirs",
-    categoria: "otros",
+    categoria: "tinto",
+    uva: "Blend (Malbec, Cabernet, Merlot)",
     precio: 19200,
     img: "https://placehold.co/500x500?text=Blend",
     stock: 6,
@@ -137,7 +152,8 @@ const vinos = [
   {
     id: 16,
     titulo: "Escorihuela Gascón Syrah",
-    categoria: "otros",
+    categoria: "tinto",
+    uva: "Syrah",
     precio: 11200,
     img: "https://placehold.co/500x500?text=Syrah",
     stock: 10,
@@ -146,7 +162,8 @@ const vinos = [
   {
     id: 17,
     titulo: "San Felipe Rosé",
-    categoria: "otros",
+    categoria: "rosado",
+    uva: "Blend Rosé",
     precio: 7200,
     img: "https://placehold.co/500x500?text=Rose",
     stock: 19,
@@ -155,7 +172,8 @@ const vinos = [
   {
     id: 18,
     titulo: "Trumpeter Sauvignon Blanc",
-    categoria: "otros",
+    categoria: "blanco",
+    uva: "Sauvignon Blanc",
     precio: 9500,
     img: "https://placehold.co/500x500?text=Sauvignon+Blanc",
     stock: 14,
@@ -164,7 +182,8 @@ const vinos = [
   {
     id: 19,
     titulo: "Escorihuela Gascón Malbec Rosé",
-    categoria: "malbec",
+    categoria: "rosado",
+    uva: "Malbec Rosé",
     precio: 9800,
     img: "https://placehold.co/500x500?text=Malbec+Rose",
     stock: 12,
@@ -173,7 +192,8 @@ const vinos = [
   {
     id: 20,
     titulo: "Andeluna 1300 Cabernet Sauvignon",
-    categoria: "cabernet sauvignon",
+    categoria: "tinto",
+    uva: "Cabernet Sauvignon",
     precio: 13200,
     img: "https://placehold.co/500x500?text=Cabernet+5",
     stock: 8,
