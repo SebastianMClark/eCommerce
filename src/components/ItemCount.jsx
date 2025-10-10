@@ -36,12 +36,13 @@ function ItemCount(){
     // null funciona igual que <></>
     return (
         <div className="item-count">  
+            Contador
             <div className="contador">
                 <button onClick= {restar} >-</button>
                 <p>{count}</p>
                 <button onClick= {sumar} >+</button>
             </div>
-            
+
             { limit ? (
                 <div className="msg-limite">
                     <br />
