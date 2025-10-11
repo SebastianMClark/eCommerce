@@ -20,7 +20,7 @@ function ItemListContainer(props) {
     getData()
       .then( (data) => { 
         console.log("✅ Promesa cumplida");
-        // setVinos(data); ejemplo useState
+        console.log(data); /* acá se cargarían los productos */
       })
       .catch( (err) => console.log(err) );
   } ), []
