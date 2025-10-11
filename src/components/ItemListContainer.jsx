@@ -1,9 +1,32 @@
 import Item from "./Item";
 import vinos from "../data/data.js";
+import getData from "../data/mockAPIService.js";
+import { useEffect } from "react";
 
 function ItemListContainer(props) {
-  return (
+  //then/catch para promesas
+  //async/await para funciones asincrónicas
+  //promesas: pending, resolved, rejected
+  //getData().then( res => console.log(res) ).catch( err => console.log(err) );
 
+  // ejemplo clase
+  // getData()
+  // .then( (data) => console.log(data) )
+  // .catch()
+
+  useEffect( () => {
+    console.log("⌛ Promesa pendiente...");
+
+    getData()
+      .then( (data) => { 
+        console.log("✅ Promesa cumplida");
+        // setVinos(data); ejemplo useState
+      })
+      .catch( (err) => console.log(err) );
+  } ), []
+  
+
+  return (
     <section className="item-list">
         <h2>{props.greeting}</h2>
         <div className="items">
@@ -20,7 +43,6 @@ function ItemListContainer(props) {
           }
         </div>
     </section>
-    
   )
 }
 
