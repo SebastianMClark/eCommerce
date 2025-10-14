@@ -21,7 +21,12 @@ function App() {
             element={ <ItemListContainer greeting="Categoría de Productos" />}
           />
           <Route path="*"
-            element={ <h2>Error 404: No se encontraron resultados</h2>}
+            element={
+              <div className="error-404">
+                <h2>Error 404: No se encontraron resultados</h2>
+                <img src="https://media1.tenor.com/m/2gyy4BcsLWsAAAAd/monkey-confused.gif" alt="Error 404"></img>
+              </div>
+            }
           />
         </Routes>
       </BrowserRouter>
