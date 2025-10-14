@@ -1,5 +1,20 @@
 # React + Vite
 
+Clonar el repositorio
+git clone https://github.com/SebastianMClark/eCommerce.git
+
+Acceder al directorio del proyecto
+cd eCommerce
+
+Instalar las dependencias necesarias
+npm install
+
+Iniciar el servidor de desarrollo
+npm run dev
+
+Abrir el proyecto en el navegador
+http://localhost:5173/
+
 # Pre-Entrega 1
 
 - Crear el proyecto utilizando Vite JS
@@ -26,3 +41,24 @@
 - git branch -M "main"
 - git remote add origin (url-repo)
 - git push -u origin main
+
+# Guía de instalación de proyectos con Vite
+
+Crear el proyecto
+npm create vite@latest nombre-del-proyecto
+
+Seleccionar las opciones de configuración
+Framework: React
+Variant: JavaScript
+
+Acceder al directorio del proyecto
+cd nombre-del-proyecto
+
+Instalar las dependencias necesarias
+npm install
+
+Iniciar el servidor de desarrollo
+npm run dev
+
+Abrir el proyecto en el navegador
+http://localhost:5173/
