@@ -30,7 +30,7 @@
 
     cd eCommerce
 
--Instalar las dependencias necesarias
+- Instalar las dependencias necesarias
 
     npm install
 
