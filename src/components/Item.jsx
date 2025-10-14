@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 export default function Item (props) {
-  const texto = `Soy el producto ${props.title}`
-  console.log(texto)
+  /* const texto = `Soy el producto ${props.title}` */
+  /* console.log(texto) */
   
   return (
     <div>
