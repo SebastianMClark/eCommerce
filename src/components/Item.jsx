@@ -1,13 +1,20 @@
-function Item (props) {
+import { Link } from "react-router";
+export default function Item (props) {
+  const texto = `Soy el producto ${props.title}`
+  console.log(texto)
+  
   return (
     <div>
       <img src={props.img} width="300" />
       <div className="info-corta">  
         <h2>{props.titulo}</h2>
         <p>Precio: $ {props.precio}</p>
+        <p>Categoría: {props.categoria}</p>
         
         <div className="botones-item">
-          <button>🔎</button>
+          <Link to={ `/detail/${props.id}` }>
+            <button>🔎</button>
+          </Link>
           <button>🛒</button>
         </div>
       </div>
@@ -15,5 +22,3 @@ function Item (props) {
     </div>
   )
 }
-
-export default Item;
