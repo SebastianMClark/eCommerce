@@ -1,20 +1,5 @@
 # React + Vite
 
-Clonar el repositorio
-git clone https://github.com/SebastianMClark/eCommerce.git
-
-Acceder al directorio del proyecto
-cd eCommerce
-
-Instalar las dependencias necesarias
-npm install
-
-Iniciar el servidor de desarrollo
-npm run dev
-
-Abrir el proyecto en el navegador
-http://localhost:5173/
-
 # Pre-Entrega 1
 
 - Crear el proyecto utilizando Vite JS
@@ -32,6 +17,30 @@ http://localhost:5173/
  - En ItemDetailContainer, leer la URL con useParams(), obtener el ID y buscar un unico producto con ese ID
  - EN ItemListContainer, leer la URL con useParams(), obtener la cteogria y buscar un listado de productos segun esa categoria
  - IMPORTANTE: Tanto ItemDetail como ItemList, deben leer los datos de forma asíncrona ( useEffect - useState )
+
+# Guía de Instalación
+
+- Abrir una terminal (teclas Win + R, escribir cmd y presionar Enter).
+
+- Clonar el repositorio
+
+    git clone https://github.com/SebastianMClark/eCommerce.git
+
+- Acceder al directorio del proyecto
+
+    cd eCommerce
+
+-Instalar las dependencias necesarias
+
+    npm install
+
+- Iniciar el servidor de desarrollo
+
+    npm run dev
+
+- Abrir el proyecto en el navegador
+
+    http://localhost:5173/
 
 # Comandos GIT
 
