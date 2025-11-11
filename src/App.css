@@ -51,6 +51,10 @@ body {
   width: 100%;
 }
 
+h1, h2, h3, h4 {
+  color: #fff !important;
+}
+
 .nav-bar a {
   color: white;
   text-decoration: none;
@@ -180,4 +184,22 @@ button:hover {
 .error-404 h2 {
   margin: 40px 0px;
   color: #fff;
+}
+
+.cart-item {
+  margin: 40px 0px;
+}
+
+.cart-item h3, .cart-item p {
+  color: #fff;
+  margin: 10px 0px;
+}
+
+.cart-item hr {
+  border: none;
+  background-color: #fff !important;
+  height: 1px !important;
+  width: 400px;
+  margin: 20px auto;
+  opacity: 1;
 }

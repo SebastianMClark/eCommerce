@@ -26,8 +26,7 @@ function ItemDetailContainer() {
                     <h4>{itemData.titulo}</h4>
                     <p>Precio: $ {itemData.precio}</p>
                     <p>{itemData.desc}</p>
-                    <ItemCount />
-                    <Link to="/"><h4>🛒 Agregar al carrito 🛒</h4></Link>
+                    <ItemCount product={itemData} />
                   </div>
             }
         </div>
