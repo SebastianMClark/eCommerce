@@ -1,10 +1,11 @@
 import Item from "./Item";
 
-import getData, { getProductsByCategory } from "../data/mockAPIService.js";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import getData, {getProductsByCategory} from '../data/FirestoreService.js';
 
 function ItemListContainer(props) {
+  getData();
   const [vinos, setVinos] = useState([]);
   const { catParam } = useParams();
   
@@ -12,7 +13,10 @@ function ItemListContainer(props) {
   useEffect( () => {
     if ( catParam ) {
       getProductsByCategory(catParam)
-      .then ( (data) => setVinos(data))
+      .then((data) => {
+        console.log("🔥 Productos por categoría:", data); // <-- AGREGAR ESTO
+        setVinos(data);
+      });
     }
     else {
       getData()

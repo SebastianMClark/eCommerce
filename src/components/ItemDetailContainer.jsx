@@ -1,12 +1,8 @@
-import { getProductById } from "../data/mockAPIService";
+import { getProductById } from "../data/FirestoreService";
 import ItemCount from "./ItemCount";
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-
-// ? 1. Leer la URL -> id del producto 
-// ? 2. useEffect -> Buscar el producto con el id de la URL
-// ? 3. useState -> almacenar los datos del producto
 
 function ItemDetailContainer() {
     const [itemData, setItemData] = useState({loading: true});
