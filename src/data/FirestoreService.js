@@ -2,14 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyA-3g943DWOAcTl5KZWZdHVt1WebvWP3Bw",
-  authDomain: "react-martes88080-91307.firebaseapp.com",
-  projectId: "react-martes88080-91307",
-  storageBucket: "react-martes88080-91307.firebasestorage.app",
-  messagingSenderId: "368497288532",
-  appId: "1:368497288532:web:6daf682e52cca5aaf9d4c1"
-};
+
 
 const app = initializeApp(firebaseConfig);
 
