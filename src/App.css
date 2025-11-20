@@ -203,3 +203,24 @@ button:hover {
   margin: 20px auto;
   opacity: 1;
 }
+
+.checkout-form {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.checkout-form input {
+  margin-bottom: 20px;
+}
+
+.checkout-form button {
+  margin: 10px;
+  width: 200px;
+}
+
+.checkout-form .buttons {
+  display:flex;
+  justify-content: space-between;
+}

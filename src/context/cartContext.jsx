@@ -21,15 +21,21 @@ export function CartContextProvider(props){
     }
 
     function getTotalPrice(){
-        /* Calcular costo total de la compra */
+        let total = 0;
+        cartItems.forEach( (item) => {
+            total += item.precio * item.cantidad;
+        });
+
+        return total;
     }
 
     function removeItem(id){
-        /* Eliminar el producto con ID */
+        const updatedCart = cartItems.filter(item => item.id !== id);
+        setCartItems(updatedCart);
     }
 
     function clearCart(){
-        /* Vaciar el carrito */
+        setCartItems([]);
     }
 
     return (

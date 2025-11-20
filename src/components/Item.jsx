@@ -13,9 +13,8 @@ export default function Item (props) {
         
         <div className="botones-item">
           <Link to={ `/detail/${props.id}` }>
-            <button>🔎</button>
+            <button>🔎 Detalle</button>
           </Link>
-          <button>🛒</button>
         </div>
       </div>
       

@@ -1,14 +1,15 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
+import vinos from "./data";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA-3g943DWOAcTl5KZWZdHVt1WebvWP3Bw",
-  authDomain: "react-martes88080-91307.firebaseapp.com",
-  projectId: "react-martes88080-91307",
-  storageBucket: "react-martes88080-91307.firebasestorage.app",
+  apiKey: import.meta.env.VITE_FS_APIKEY,
+  authDomain: import.meta.env.VITE_FS_AUTH,
+  projectId: import.meta.env.VITE_FS_PROJECTID,
+  storageBucket: import.meta.env.VITE_FS_BUCKET,
   messagingSenderId: "368497288532",
-  appId: "1:368497288532:web:6daf682e52cca5aaf9d4c1"
+  appId: import.meta.env.VITE_FS_APPID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -26,12 +27,13 @@ async function getData(){ // Le ponemos async para poder usar await. Si no lo ha
     return dataDocs;
 } // Ahora al llamar getData nos retorna una promesa (usar await)
 
-//getProductById (1:43:42)
+//getProductById (1:43:42), (2:21:00)
 export async function getProductById(idParam){
     const docRef = doc(db, "products", idParam) // Referencia de documento que esta en: base de datos, colleccion, identificador
     const docSnapshot = await getDoc(docRef);
     const docData = docSnapshot.data();
-    return { ...docData, id: docData.id };
+    const idDoc = docSnapshot.id
+    return { ...docData, id: idDoc };
 }
 
 //getProductsByCategory (1:52:14)
@@ -44,6 +46,21 @@ export async function getProductsByCategory(catParam) {
         return { ...item.data(), id: item.id }
     } )
     return dataDocs;
+}
+
+export async function createBuyOrder(orderData){
+    const ordersRef = collection(db, "orders") //la coleccion orders se crea automaticamente en Firestore
+    const newDoc = await addDoc(ordersRef, orderData) //addDoc retorna una promesa (hover para mas info) asi que le ponemos await
+    return newDoc;
+}
+
+export async function exportProducts(){
+    const productsRef = collection(db, "products")
+    for(let item of vinos){
+        delete item.id; // borro id para usar el de firestore
+        const newDoc = await addDoc(productsRef, item)
+        console.log("doc creado", newDoc.id)
+    }
 }
 
 export default getData;

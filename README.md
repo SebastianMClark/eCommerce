@@ -1,73 +1,179 @@
-# React + Vite
+# 🍷 Belnuit - React + Vite
 
-# Pre-Entrega 1
+Esta aplicación es un **ecommerce desarrollado en React**, que permite a
+los usuarios navegar productos, agregarlos al carrito y completar una
+orden de compra.\
+Utiliza **React**, **Context API**, **Firestore** y componentes
+reutilizables para mantener un código limpio, modular y escalable.
 
-- Crear el proyecto utilizando Vite JS
-- Crear el componente ItemListContainer y pasarle una prop "greeting"
-- Crear NavBar con un menu de navegación con: Logo, categorias, y CartWidget
-- Creat CartWidget con una imagen/icono/emoji del carrito de compras
+------------------------------------------------------------------------
 
-# Pre-Entrega 2
+# ✨ Funcionalidades principales
 
- - Instalar react-router (npm i react-router)
- - Configurar en el componente App la navegación con los componentes: BrowserRouter, Routes, Route
- - Genera links con el componente Link para poder navegar: tanto en NavBar como en Item (ver detalle)
- - Crear ItemDetailContainer, mostrando los detalles de un producto
- - Crear Item, que representa la Card de cada producto dentro del listado
- - En ItemDetailContainer, leer la URL con useParams(), obtener el ID y buscar un unico producto con ese ID
- - EN ItemListContainer, leer la URL con useParams(), obtener la cteogria y buscar un listado de productos segun esa categoria
- - IMPORTANTE: Tanto ItemDetail como ItemList, deben leer los datos de forma asíncrona ( useEffect - useState )
+## 🧭 Navegación de productos
 
-# Guía de Instalación
+-   Lista de productos obtenida desde Firestore.
+-   Cada producto muestra: imagen, título, precio y stock.
+-   Acceso al detalle individual de cada producto.
 
-- Abrir una terminal (teclas Win + R, escribir cmd y presionar Enter).
+------------------------------------------------------------------------
 
-- Clonar el repositorio
+## 🛒 Carrito de compras
 
-    git clone https://github.com/SebastianMClark/eCommerce.git
+-   Implementado con **React Context** para un estado global accesible
+    desde toda la app.
+-   Permite:
+    -   Agregar productos desde cualquier vista.
+    -   Evitar mutaciones directas (siempre se trabaja con copias del
+        estado).
+    -   Ver detalles completos del carrito:
+        -   Imagen del producto\
+        -   Título\
+        -   Precio\
+        -   Cantidad seleccionada\
+    -   Eliminar productos individualmente (`removeItem(id)`).
+    -   Vaciar el carrito por completo (`clearCart()`).
+    -   Calcular el total automáticamente (`getTotalPrice()`).
 
-- Acceder al directorio del proyecto
+------------------------------------------------------------------------
 
-    cd eCommerce
+## 🧮 Cálculo dinámico del total
 
-- Instalar las dependencias necesarias
+-   El total se recalcula automáticamente cada vez que se modifica el
+    carrito.
+-   La lógica está centralizada en funciones puras dentro del contexto.
 
-    npm install
+------------------------------------------------------------------------
 
-- Iniciar el servidor de desarrollo
+## 🧾 Checkout y generación de orden
 
-    npm run dev
+-   Formulario donde el cliente ingresa:
+    -   Nombre y apellido\
+    -   Email\
+    -   Teléfono\
+-   Validación básica de inputs.
+-   Al confirmar:
+    -   Se construye el objeto `orderData` con cliente, productos y
+        total.
+    -   Se envía la orden a Firestore mediante `createBuyOrder()`.
+    -   Se muestra un mensaje con el **ID de la orden generada**.
+    -   Se vacía el carrito automáticamente.
 
-- Abrir el proyecto en el navegador
+------------------------------------------------------------------------
+
+## 🔥 Integración con Firestore
+
+Cada orden guardada incluye: - Datos del comprador\
+- Productos del carrito\
+- Total\
+- Timestamp
+
+Los productos también se obtienen desde Firestore para mostrarlos en la
+tienda.
+
+------------------------------------------------------------------------
+
+## 📱 Responsive y modular
+
+-   Componentes desacoplados y fáciles de mantener.
+-   Estilos simples pero adaptables a distintos dispositivos.
+-   Flujo claro:\
+    **Productos → Carrito → Checkout → Confirmación**
+
+------------------------------------------------------------------------
+
+## 🧩 Características técnicas
+
+-   React + Vite\
+-   Context API como manejador global del estado\
+-   Firestore como base de datos NoSQL\
+-   Hooks personalizados y componentes reutilizables\
+-   Uso de async/await para interacción con Firebase\
+-   Estructura organizada en carpetas: `components/`, `context/`,
+    `services/`, etc.
+
+------------------------------------------------------------------------
+
+# 🔧 Guía de Instalación
+
+### 1. Abrir una terminal
+
+(Win + R → escribir `cmd` → Enter)
+
+### 2. Clonar el repositorio
+
+``` bash
+git clone https://github.com/SebastianMClark/eCommerce.git
+```
+
+### 3. Acceder al directorio
+
+``` bash
+cd eCommerce
+```
+
+### 4. Instalar dependencias
+
+``` bash
+npm install
+```
+
+### 5. Iniciar el servidor
+
+``` bash
+npm run dev
+```
+
+### 6. Abrir el proyecto
 
     http://localhost:5173/
 
-# Comandos GIT
+------------------------------------------------------------------------
 
-- git init
-- git add .
-- git commit -m "Primer entrega"
-- git branch -M "main"
-- git remote add origin (url-repo)
-- git push -u origin main
+# 🧬 Comandos GIT útiles
 
-# Guía de instalación de proyectos con Vite
+``` bash
+git init
+git add .
+git commit -m "Primer entrega"
+git branch -M main
+git remote add origin <url-repo>
+git push -u origin main
+```
 
-Crear el proyecto
+------------------------------------------------------------------------
+
+# ⚡ Guía rápida para crear proyectos con Vite
+
+### 1. Crear el proyecto
+
+``` bash
 npm create vite@latest nombre-del-proyecto
+```
 
-Seleccionar las opciones de configuración
-Framework: React
-Variant: JavaScript
+### 2. Seleccionar opciones
 
-Acceder al directorio del proyecto
+-   **Framework**: React\
+-   **Variant**: JavaScript
+
+### 3. Acceder al proyecto
+
+``` bash
 cd nombre-del-proyecto
+```
 
-Instalar las dependencias necesarias
+### 4. Instalar dependencias
+
+``` bash
 npm install
+```
 
-Iniciar el servidor de desarrollo
+### 5. Iniciar servidor
+
+``` bash
 npm run dev
+```
 
-Abrir el proyecto en el navegador
-http://localhost:5173/
+### 6. Abrir en el navegador
+
+    http://localhost:5173/
