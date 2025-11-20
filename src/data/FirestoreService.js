@@ -12,6 +12,7 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FS_APPID
 };
 
+
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
@@ -49,17 +50,17 @@ export async function getProductsByCategory(catParam) {
 }
 
 export async function createBuyOrder(orderData){
-    const ordersRef = collection(db, "orders") //la coleccion orders se crea automaticamente en Firestore
-    const newDoc = await addDoc(ordersRef, orderData) //addDoc retorna una promesa (hover para mas info) asi que le ponemos await
+    const ordersRef = collection(db, "orders");
+    const newDoc = await addDoc(ordersRef, orderData);
     return newDoc;
 }
 
 export async function exportProducts(){
-    const productsRef = collection(db, "products")
-    for(let item of vinos){
-        delete item.id; // borro id para usar el de firestore
-        const newDoc = await addDoc(productsRef, item)
-        console.log("doc creado", newDoc.id)
+    const productsRef = collection(db, "products");
+    for (let item of vinos) {
+        delete item.id;
+        const newDoc = await addDoc(productsRef, item);
+        console.log("doc creado", newDoc.id);
     }
 }
 
