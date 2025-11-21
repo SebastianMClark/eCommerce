@@ -4,12 +4,13 @@ import { Link } from "react-router";
 
 function CartWidget() {
   const { countItemsInCart } = useContext( cartContext );
+  const total = countItemsInCart();
   
 
   return (
     <div className="div-carrito">
       <Link to="cart">
-        🛒 { countItemsInCart() }
+        🛒 { total > 0 ? total : "" }
       </Link>
     </div>
   )

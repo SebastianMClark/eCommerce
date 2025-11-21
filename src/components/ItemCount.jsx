@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import cartContext from "../context/cartContext"; // Se escribe sin brackets porque es un import 'named'
 
-function ItemCount( {product} ){
+function ItemCount({ product, onAdd }){
     const { addItem } = useContext(cartContext) //{ cart: cartItems, addItem }
 
     const [count, setCount] = useState(1);
@@ -38,6 +38,7 @@ function ItemCount( {product} ){
 
     function addToCart(){
         addItem( { ...product, cantidad: count } )
+        if (onAdd) onAdd();
     }
 
     // null funciona igual que <></>
